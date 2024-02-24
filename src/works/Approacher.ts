@@ -68,6 +68,8 @@ export default class Approacher {
 
     console.log('1. 예매 시작 페이지 접속 OK');
 
+    await this.pageHandler.clickElement(Approacher.homePage, this.pathConfig.POPUP_CLOSE_BUTTON);
+
     /** 상단 로그인 버튼 클릭 */
     await this.pageHandler.clickElement(Approacher.homePage, this.pathConfig.TOP_LOGIN_BUTTON);
 
@@ -129,6 +131,8 @@ export default class Approacher {
     await this.kakaoLogin();
 
     console.log('3. 카카오 로그인 OK');
+
+    await this.pageHandler.clickElement(Approacher.homePage, this.pathConfig.POPUP_CLOSE_BUTTON);
 
     /** 예매 날짜 선택 버튼 클릭 */
     await this.pageHandler.clickElement(Approacher.homePage, this.currnetConfig.TARGET_DATE[0]);

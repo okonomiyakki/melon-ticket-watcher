@@ -45,6 +45,8 @@ export default class EnvConfig {
   readonly ID: string;
   readonly PW: string;
 
+  readonly POPUP_CLOSE_BUTTON: string;
+
   readonly TOP_LOGIN_BUTTON: string;
   readonly KAKAO_LOGIN_BUTTON: string;
   readonly KAKAO_LOGIN_ID_INPUT: string;
@@ -155,6 +157,7 @@ export default class EnvConfig {
     EnvConfig.loadEnv();
 
     return this.createConfig({
+      POPUP_CLOSE_BUTTON: process.env.POPUP_CLOSE_BUTTON,
       TOP_LOGIN_BUTTON: process.env.TOP_LOGIN_BUTTON,
       KAKAO_LOGIN_BUTTON: process.env.KAKAO_LOGIN_BUTTON,
       KAKAO_LOGIN_ID_INPUT: process.env.KAKAO_LOGIN_ID_INPUT,
